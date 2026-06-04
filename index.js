@@ -34,7 +34,6 @@ export async function open (git, fs, dir, opts = {}) {
     // CRUD
     get: crud.get,
     put: crud.put,
-    list: crud.list,
     remove: crud.remove,
 
     // Git

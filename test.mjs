@@ -41,13 +41,6 @@ async function main () {
   try { await repo.get('/docs') }
   catch (e) { isDirThrew = true; console.log('get /docs: threw —', e.message) }
 
-  // LIST — returns array of names
-  const rootList = await repo.list('/')
-  console.log('list /:', rootList)
-
-  const docsList = await repo.list('/docs')
-  console.log('list /docs:', docsList)
-
   // SELECT — returns array with visibility modes
   const selRaw = await repo.select('/docs')
   console.log('select /docs (raw):', selRaw.map(n => n.key))
@@ -111,7 +104,7 @@ async function main () {
     val.toString() === 'hello mycelium\n' &&
     notFoundThrew &&
     isDirThrew &&
-    rootList.length === 2 &&
+    selRaw.length === 2 &&
     selData.length === 1 &&
     selMeta.length === 1 &&
     selNone.length === 0 &&
