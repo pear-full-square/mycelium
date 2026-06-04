@@ -1,0 +1,11 @@
+{
+  "name": "mycelium",
+  "version": "0.1.0",
+  "description": "Mycelium — the data fabric base layer",
+  "type": "module",
+  "main": "index.js",
+  "dependencies": {
+    "bare-fs": "^4.7.2",
+    "isomorphic-git": "^1.38.4"
+  }
+}
